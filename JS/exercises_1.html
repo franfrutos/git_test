@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises JS 1</title>
+</head>
+<body>
+    <script>
+        //First function:
+        function add7(a) {
+            return a + 7;
+        }
+        console.log(add7(12));
+        //Second function:
+        function product(a, b){
+            return a * b;
+        }
+        console.log(product(2, 2));
+        //Third function:
+        function capitalize(word){
+            return word = word.replace(word.charAt(0), word.charAt(0).toUpperCase())
+        }
+        console.log(capitalize("word"));
+        //Fourth function (with func expression an arrow):
+        let lastLetter = (word) => word.charAt(word.length - 1) //Substract 1 because length returns the absolute length (without 0)
+        console.log(lastLetter("abcd"))
+    </script>
+    
+</body>
+</html>
