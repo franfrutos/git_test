@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Problem</title>
+</head>
+<body>
+    <h2>Fizz Buzz game!</h2>
+    <p>This are the numbers: </p> <p id="list"></p>
+    <script>
+        let input = Number(window.prompt("Enter a number!"));
+        let numList = [];
+        for(i = 1; i<input+1; ++i){
+            if ((i%3 == 0) && (i%5 == 0)) {
+                numList[i-1] = "fizzbuzz";
+            } else if (i%3 == 0) {
+                numList[i-1] = "fizz";
+            } else if (i%5 == 0) {
+                numList[i-1] = "buzz";
+            } else {
+                numList[i-1] = i.toString();
+            }
+        }
+        numList = numList.join(", ")
+        document.getElementById("list").innerHTML = numList + ".";
+    </script>
+</body>
+</html>
